@@ -9,7 +9,7 @@ A batch script to disable services sysmain and diagtrack, as well as unnecessary
 
 win-preconfig-calling-card.ps1
 
-Powershell script to  change some customer information in the LogMeIn Rescue Calling Card for Nerds On Call. I am not affiliated with GoTo/LogMeIn. It specifically looks for channel IDs related to Nerds On Call, so it will not affect LMI Rescue Calling Cards for other companies. Needs to be run as administrator.
+Powershell script to  change some customer information in the LogMeIn Rescue Calling Card for Nerds On Call. I am not affiliated with GoTo/LogMeIn. It specifically looks for channel IDs related to Nerds On Call, so it will not affect LMI Rescue Calling Cards for other companies. Needs to be run as administrator, run with the following batch script to avoid annoying PS permission prompts.
 
 
 start-cc-config-admin.bat
@@ -17,7 +17,7 @@ start-cc-config-admin.bat
 A batch file to invoke the previous powsershell script. This is useful for running the script without needing to go through the permission popups when running a powershell script directly. It only runs the customer information configuration PS script. Needs to be run as administrator.
 
 
-clear-acrobat-cache-admin.bat
+clear-acrobat-cache-admin.bat (retired, still works)
 
 *EXPERIMENTAL* A batch script to clear the Adobe Acrobat cache. Other utilities like CCleaner or Glary's Utilities should be able to do that, but I don't much like installing CC on people's computers and GU doesn't reliably clear the cache. Needs to be run as administrator.
 
@@ -25,3 +25,13 @@ clear-acrobat-cache-admin.bat
 clear-print-queue-admin.bat
 
 A basic batch script to stop the print spooler service, clear the spooler folder, then restart the print spooler service. Needs to be run as administrator.
+
+
+PS-clear-adobe-cache.ps1
+
+*EXPERIMENTAL* A powershell script to clear the Adobe Acrobat cache. Other utilities like CCleaner or Glary's Utilities should be able to do that, but I don't much like installing CC on people's computers and GU doesn't reliably clear the cache. It's basically the same as the batch script, but calculates a total size in magabytes of the cache to be cleared. Run with the following batch script to avoid annoying PS permission prompts.
+
+
+start-adobe-clean-admin.bat
+
+A batch file to invoke the previous powsershell script. This is useful for running the script without needing to go through the permission popups when running a powershell script directly. It only runs the customer information configuration PS script. Needs to be run as administrator.
